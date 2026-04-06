@@ -55,6 +55,7 @@ class Qwen3TTSSpeakerEncoderConfig(PretrainedConfig):
         enc_res2net_scale=8,
         enc_se_channels=128,
         sample_rate=24000,
+        **kwargs,
     ):
         self.mel_dim = mel_dim
         self.enc_dim = enc_dim
@@ -65,6 +66,7 @@ class Qwen3TTSSpeakerEncoderConfig(PretrainedConfig):
         self.enc_res2net_scale = enc_res2net_scale
         self.enc_se_channels = enc_se_channels
         self.sample_rate = sample_rate
+        super().__init__(**kwargs)
 
 
 class Qwen3TTSTalkerCodePredictorConfig(PretrainedConfig):
